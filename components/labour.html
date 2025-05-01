@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Workers - Skyline Labour</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="/index.html">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .labour-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .labour-card {
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .labour-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .labour-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .labour-info {
+            padding: 1.5rem;
+        }
+
+        .labour-name {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .labour-title {
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .labour-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .skill-tag {
+            background: var(--light-gray);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--primary-color);
+        }
+
+        .labour-details {
+            margin-bottom: 1rem;
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .detail-item i {
+            color: var(--secondary-color);
+        }
+
+        .availability {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .available {
+            background: #2ecc71;
+            color: white;
+        }
+
+        .unavailable {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .filter-section {
+            background: var(--light-gray);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+        }
+
+        .filter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .filter-group label {
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+
+        .filter-group select,
+        .filter-group input {
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .search-bar {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--secondary-color);
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+
+        .page-title {
+            text-align: center;
+            padding: 4rem 0 2rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+        }
+
+        .page-title h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-title p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Skyline Labour</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/index.html#about">About</a></li>
+                <li><a href="/index.html#features">Features</a></li>
+                <li><a href="/index.html#services">Services</a></li>
+                <li><a href="/index.html#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-title">
+            <h1>Available Workers</h1>
+            <p>Find skilled and verified workers for your projects</p>
+        </section>
+
+        <section class="filter-section">
+            <div class="container">
+                <input type="text" class="search-bar" placeholder="Search workers by name, skill, or location...">
+                <div class="filter-grid">
+                    <div class="filter-group">
+                        <label for="skill-filter">Skill Level</label>
+                        <select id="skill-filter">
+                            <option value="">All Levels</option>
+                            <option value="skilled">Skilled</option>
+                            <option value="semi-skilled">Semi-Skilled</option>
+                            <option value="unskilled">Unskilled</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="location-filter">Location</label>
+                        <select id="location-filter">
+                            <option value="">All Locations</option>
+                            <option value="north">North</option>
+                            <option value="south">South</option>
+                            <option value="east">East</option>
+                            <option value="west">West</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="availability-filter">Availability</label>
+                        <select id="availability-filter">
+                            <option value="">All</option>
+                            <option value="available">Available Now</option>
+                            <option value="unavailable">Currently Working</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="experience-filter">Experience</label>
+                        <select id="experience-filter">
+                            <option value="">Any Experience</option>
+                            <option value="0-2">0-2 years</option>
+                            <option value="3-5">3-5 years</option>
+                            <option value="5+">5+ years</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="labour-grid">
+            <!-- Worker Card 1 -->
+            <div class="labour-card">
+                <img src="data:image/jpeg;base64,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" alt="Rajesh Kumar" class="labour-image">
+                <div class="labour-info">
+                    <h3 class="labour-name">Rajesh Kumar</h3>
+                    <p class="labour-title">Skilled Mason</p>
+                    <div class="labour-skills">
+                        <span class="skill-tag">Masonry</span>
+                        <span class="skill-tag">Concrete Work</span>
+                        <span class="skill-tag">Tile Installation</span>
+                    </div>
+                    <div class="labour-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Mumbai, Maharashtra</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            <span>8 years experience</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-star"></i>
+                            <span>4.8/5 rating</span>
+                        </div>
+                    </div>
+                    <span class="availability available">Available Now</span>
+                </div>
+            </div>
+
+            <!-- Worker Card 2 -->
+            <div class="labour-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJW1ZptlJoRYQwZItAQmJUddHK67ZKEYFt4A&s" alt="Amit Singh" class="labour-image">
+                <div class="labour-info">
+                    <h3 class="labour-name">Amit Singh</h3>
+                    <p class="labour-title">Carpenter</p>
+                    <div class="labour-skills">
+                        <span class="skill-tag">Woodworking</span>
+                        <span class="skill-tag">Furniture Making</span>
+                        <span class="skill-tag">Door Installation</span>
+                    </div>
+                    <div class="labour-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Delhi, NCR</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            <span>5 years experience</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-star"></i>
+                            <span>4.6/5 rating</span>
+                        </div>
+                    </div>
+                    <span class="availability unavailable">Currently Working</span>
+                </div>
+            </div>
+
+            <!-- Worker Card 3 -->
+            <div class="labour-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnxi-L2nb71EYfLxkwukoWEhYRMkaZBNOq2g&s" alt="Priya Sharma" class="labour-image">
+                <div class="labour-info">
+                    <h3 class="labour-name">Priya Sharma</h3>
+                    <p class="labour-title">Electrician</p>
+                    <div class="labour-skills">
+                        <span class="skill-tag">Electrical Wiring</span>
+                        <span class="skill-tag">Maintenance</span>
+                        <span class="skill-tag">Safety Compliance</span>
+                    </div>
+                    <div class="labour-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Bangalore, Karnataka</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            <span>3 years experience</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-star"></i>
+                            <span>4.9/5 rating</span>
+                        </div>
+                    </div>
+                    <span class="availability available">Available Now</span>
+                </div>
+            </div>
+
+            <!-- Add more worker cards as needed -->
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Skyline Labour</h3>
+                    <p>Your trusted partner in construction workforce management.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Skyline Labour. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    // ...existing code...
+    <script src="../js/main.js"></script>
+    // ...existing code...
+    <script>
+        function filterLabourCards() {
+            const query = document.querySelector('.search-bar').value.toLowerCase();
+            const skill = document.getElementById('skill-filter').value.toLowerCase();
+            const location = document.getElementById('location-filter').value.toLowerCase();
+            const availability = document.getElementById('availability-filter').value.toLowerCase();
+            const experience = document.getElementById('experience-filter').value.toLowerCase();
+            const cards = document.querySelectorAll('.labour-card');
+    
+            cards.forEach(card => {
+                const name = card.querySelector('.labour-name').textContent.toLowerCase();
+                const title = card.querySelector('.labour-title').textContent.toLowerCase();
+                const skills = Array.from(card.querySelectorAll('.skill-tag')).map(el => el.textContent.toLowerCase()).join(' ');
+                const locationText = card.querySelector('.detail-item span').textContent.toLowerCase();
+                const availabilityText = card.querySelector('.availability').classList.contains('available') ? 'available' : 'unavailable';
+                const experienceText = card.querySelector('.labour-details .detail-item:nth-child(2) span').textContent.toLowerCase();
+    
+                let show = true;
+    
+                // Search bar filter
+                if (
+                    query &&
+                    !(
+                        name.includes(query) ||
+                        title.includes(query) ||
+                        skills.includes(query) ||
+                        locationText.includes(query)
+                    )
+                ) {
+                    show = false;
+                }
+    
+                // Skill filter
+                if (skill && !title.includes(skill)) {
+                    show = false;
+                }
+    
+                // Location filter
+                if (location && !locationText.includes(location)) {
+                    show = false;
+                }
+    
+                // Availability filter
+                if (availability && availabilityText !== availability) {
+                    show = false;
+                }
+    
+                // Experience filter
+                if (experience) {
+                    if (experience === '0-2' && !experienceText.match(/0|1|2/)) show = false;
+                    if (experience === '3-5' && !experienceText.match(/3|4|5/)) show = false;
+                    if (experience === '5+' && !experienceText.match(/6|7|8|9|10|\d{2,}/)) show = false;
+                }
+    
+                card.style.display = show ? '' : 'none';
+            });
+        }
+    
+        document.querySelector('.search-bar').addEventListener('input', filterLabourCards);
+        document.getElementById('skill-filter').addEventListener('change', filterLabourCards);
+        document.getElementById('location-filter').addEventListener('change', filterLabourCards);
+        document.getElementById('availability-filter').addEventListener('change', filterLabourCards);
+        document.getElementById('experience-filter').addEventListener('change', filterLabourCards);
+    </script>
+    // ...existing code...
+    // ...existing code...
+    <!-- <script src="../js/main.js"></script> -->
+</body>
+</html> 

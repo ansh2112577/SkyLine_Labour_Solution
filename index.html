@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skyline Labour - Verified Labour Platform</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Loading Animation -->
+    <div class="loader-wrapper">
+      <div class="loader"></div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img
+            src="images/logo.png"
+            alt="Skyline Labour Logo"
+            onerror="this.style.display='none'"
+          />
+          <h1>Skyline Labour</h1>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#security">Security</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="auth-buttons">
+          <a href="./components/labour.html" class="find-labour-btn">
+            <i class="fas fa-search"></i>
+            Find Labour
+          </a>
+          <div class="login-container">
+            <a href="./components/login.html" class="login-btn" id="loginBtn">
+              <i class="fas fa-sign-in-alt"></i>
+              Login
+            </a>
+
+            <div class="user-dropdown">
+              <a href="#" class="logout-btn">
+                <i class="fas fa-sign-out-alt"></i>
+                Logout
+              </a>
+            </div>
+          </div>
+          <a href="./components/signup.html" class="signup-btn" id="signupBtn">
+            <i class="fas fa-user-plus"></i>
+            Sign Up
+          </a>
+        </div>
+        <div class="mobile-menu">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-content">
+          <h1>Solving the Unorganized Labour Crisis</h1>
+          <p>
+            Connecting contractors with pre-verified skilled and unskilled
+            workers for reliable, efficient construction.
+          </p>
+          <a href="#contact" class="cta-button">Get Started</a>
+        </div>
+      </section>
+
+      <section class="stats">
+        <div class="container">
+          <div class="stats-grid">
+            <div class="stat-card">
+              <i class="fas fa-users"></i>
+              <h3>200</h3>
+              <p>Verified Workers</p>
+            </div>
+            <div class="stat-card">
+              <i class="fas fa-building"></i>
+              <h3>10+</h3>
+              <p>Active Projects</p>
+            </div>
+            <div class="stat-card">
+              <i class="fas fa-handshake"></i>
+              <h3>98%</h3>
+              <p>Client Satisfaction</p>
+            </div>
+            <div class="stat-card">
+              <i class="fas fa-city"></i>
+              <h3>2+</h3>
+              <p>Cities Covered</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <div class="container">
+          <h2>Our Solution</h2>
+          <div class="solution-content">
+            <div class="solution-text">
+              <p>
+                Our chosen solution is a Verified Labour Platform, a website
+                connecting contractors with pre-verified skilled and unskilled
+                workers, ensuring reliability, efficiency, and reduced hiring
+                time.
+              </p>
+            </div>
+            <div class="solution-image">
+              <img
+                src="images/solution.jpg"
+                alt="Labour Platform Solution"
+                onerror="this.style.display='none'"
+              />
+              <div class="image-placeholder">Solution Preview</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="features">
+        <div class="container">
+          <h2>Key Features</h2>
+          <div class="features-grid">
+            <div class="feature-card">
+              <i class="fas fa-user-check"></i>
+              <h3>Verified Workers</h3>
+              <p>Pre-verified skilled and unskilled labor pool</p>
+            </div>
+            <div class="feature-card">
+              <i class="fas fa-clock"></i>
+              <h3>Real-time Availability</h3>
+              <p>Instant access to available workers</p>
+            </div>
+            <div class="feature-card">
+              <i class="fas fa-shield-alt"></i>
+              <h3>Secure Payments</h3>
+              <p>Safe and reliable payment system</p>
+            </div>
+            <div class="feature-card">
+              <i class="fas fa-building"></i>
+              <h3>Support Centers</h3>
+              <p>Physical support centers for seamless management</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="security">
+        <div class="container">
+          <h2>Secure & Verified Platform</h2>
+          <div class="security-grid">
+            <div class="security-card">
+              <i class="fas fa-shield-alt"></i>
+              <h3>Digital Verification</h3>
+              <p>
+                Advanced digital verification system ensuring all workers are
+                pre-screened and authenticated.
+              </p>
+            </div>
+            <div class="security-card">
+              <i class="fas fa-database"></i>
+              <h3>Cloud Database</h3>
+              <p>
+                Secure cloud-based database storing verified worker profiles and
+                project information.
+              </p>
+            </div>
+            <div class="security-card">
+              <i class="fas fa-lock"></i>
+              <h3>End-to-End Security</h3>
+              <p>
+                Enterprise-grade security protocols protecting all transactions
+                and communications.
+              </p>
+            </div>
+            <div class="security-card">
+              <i class="fas fa-user-shield"></i>
+              <h3>Identity Verification</h3>
+              <p>
+                Multi-factor authentication and identity verification for all
+                platform users.
+              </p>
+            </div>
+          </div>
+          <div class="security-features">
+            <div class="security-feature">
+              <i class="fas fa-check-circle"></i>
+              <span>SSL Encrypted Connections</span>
+            </div>
+            <div class="security-feature">
+              <i class="fas fa-check-circle"></i>
+              <span>Regular Security Audits</span>
+            </div>
+            <div class="security-feature">
+              <i class="fas fa-check-circle"></i>
+              <span>Data Backup & Recovery</span>
+            </div>
+            <div class="security-feature">
+              <i class="fas fa-check-circle"></i>
+              <span>Compliance with Data Protection Standards</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="services">
+        <div class="container">
+          <h2>Our Services</h2>
+          <div class="services-grid">
+            <div class="service-card">
+              <h3>Contractor-Labor Matchmaking</h3>
+              <p>Efficient matching system for contractors and workers</p>
+            </div>
+            <div class="service-card">
+              <h3>Workforce Management</h3>
+              <p>Comprehensive workforce management solutions</p>
+            </div>
+            <div class="service-card">
+              <h3>Quality Assurance</h3>
+              <p>Ensuring high-quality construction work</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials">
+        <div class="container">
+          <h2>What Our Clients Say</h2>
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <i class="fas fa-quote-left"></i>
+                <p>
+                  "Skyline Labour has transformed how we hire construction
+                  workers. The pre-verified workers have saved us countless
+                  hours of screening."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <img
+                  src="images/testimonial1.jpg"
+                  alt="John Doe"
+                  onerror="this.style.display='none'"
+                />
+                <div class="image-placeholder">JD</div>
+                <div>
+                  <h4>John Doe</h4>
+                  <p>Project Manager, Construction Co.</p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <i class="fas fa-quote-left"></i>
+                <p>
+                  "The real-time availability feature is a game-changer. We can
+                  quickly find workers when we need them most."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <img
+                  src="images/testimonial2.jpg"
+                  alt="Jane Smith"
+                  onerror="this.style.display='none'"
+                />
+                <div class="image-placeholder">JS</div>
+                <div>
+                  <h4>Jane Smith</h4>
+                  <p>Contractor, BuildRight Inc.</p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <i class="fas fa-quote-left"></i>
+                <p>
+                  "The quality of workers is exceptional. Every worker we've
+                  hired through Skyline Labour has been professional and
+                  skilled."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <img
+                  src="images/testimonial3.jpg"
+                  alt="Mike Johnson"
+                  onerror="this.style.display='none'"
+                />
+                <div class="image-placeholder">MJ</div>
+                <div>
+                  <h4>Mike Johnson</h4>
+                  <p>Site Manager, Development Corp.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing" class="pricing">
+        <div class="container">
+          <h2>Pricing Plans</h2>
+          <div class="pricing-grid">
+            <div class="pricing-card">
+              <div class="pricing-header">
+                <h3>Basic</h3>
+                <div class="price">
+                  <span class="amount">₹0</span>
+                  <span class="period">/month</span>
+                </div>
+              </div>
+              <div class="pricing-features">
+                <ul>
+                  <li><i class="fas fa-check"></i> Basic worker search</li>
+                  <li><i class="fas fa-check"></i> Limited job postings</li>
+                  <li><i class="fas fa-check"></i> Standard support</li>
+                </ul>
+              </div>
+              <a href="signup.html" class="pricing-button">Get Started</a>
+            </div>
+            <div class="pricing-card featured">
+              <div class="pricing-header">
+                <div class="featured-badge">Most Popular</div>
+                <h3>Professional</h3>
+                <div class="price">
+                  <span class="amount">₹999</span>
+                  <span class="period">/month</span>
+                </div>
+              </div>
+              <div class="pricing-features">
+                <ul>
+                  <li><i class="fas fa-check"></i> Advanced worker search</li>
+                  <li><i class="fas fa-check"></i> Unlimited job postings</li>
+                  <li><i class="fas fa-check"></i> Priority support</li>
+                  <li><i class="fas fa-check"></i> Worker verification</li>
+                  <li><i class="fas fa-check"></i> Analytics dashboard</li>
+                </ul>
+              </div>
+              <a href="signup.html" class="pricing-button">Choose Plan</a>
+            </div>
+            <div class="pricing-card">
+              <div class="pricing-header">
+                <h3>Enterprise</h3>
+                <div class="price">
+                  <span class="amount">Custom</span>
+                  <span class="period">/month</span>
+                </div>
+              </div>
+              <div class="pricing-features">
+                <ul>
+                  <li><i class="fas fa-check"></i> Custom solutions</li>
+                  <li><i class="fas fa-check"></i> Dedicated support</li>
+                  <li><i class="fas fa-check"></i> API access</li>
+                  <li><i class="fas fa-check"></i> Custom integrations</li>
+                  <li><i class="fas fa-check"></i> Training & onboarding</li>
+                </ul>
+              </div>
+              <a href="#contact" class="pricing-button">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="faq">
+        <div class="container">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-grid">
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>How does the verification process work?</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Our verification process includes document verification,
+                  background checks, and skill assessment. Workers must provide
+                  valid ID proofs, address verification, and undergo a thorough
+                  screening process.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>What payment methods are accepted?</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  We accept all major credit cards, UPI, net banking, and
+                  digital wallets. Payments are processed securely through our
+                  payment gateway partners.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>How do I report an issue?</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  You can report issues through our support portal, contact
+                  form, or by calling our 24/7 support line. Our team will
+                  respond within 2 hours.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>What happens if a worker doesn't show up?</h3>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  We have a strict attendance policy. If a worker doesn't show
+                  up, we'll immediately provide a replacement worker at no
+                  additional cost.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="container">
+          <h2>Contact Us</h2>
+          <div class="contact-content">
+            <form class="contact-form">
+              <input type="text" placeholder="Name" required />
+              <input type="email" placeholder="Email" required />
+              <input type="tel" placeholder="Phone" />
+              <textarea placeholder="Message" required></textarea>
+              <button type="submit" class="submit-button">Send Message</button>
+            </form>
+            <div class="contact-info">
+              <h3>Get in Touch</h3>
+              <p>
+                <i class="fas fa-map-marker-alt"></i> 123 Business Street, City,
+                Country
+              </p>
+              <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+              <p><i class="fas fa-envelope"></i> info@skylinelabour.com</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Skyline Labour</h3>
+            <p>Your trusted partner in construction workforce management.</p>
+          </div>
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Connect With Us</h3>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Skyline Labour. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+      // Check login status and update header buttons
+      function updateHeaderButtons() {
+        const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+        const userEmail = localStorage.getItem("userEmail");
+        const loginBtn = document.getElementById("loginBtn");
+        const signupBtn = document.getElementById("signupBtn");
+
+        // ...existing code...
+        if (isLoggedIn && userEmail) {
+          // User is logged in
+          loginBtn.innerHTML = `<i class="fas fa-user"></i> ${
+            userEmail.split("@")[0]
+          }`;
+          loginBtn.href = "#";
+          signupBtn.style.display = "none";
+        } else {
+          // User is not logged in
+          loginBtn.innerHTML = '<i class="fas fa-sign-in-alt"></i> Login';
+          loginBtn.href = "./components/login.html"; // <-- fixed path
+          signupBtn.style.display = "flex";
+        }
+        // ...existing code...
+      }
+
+      // Update header buttons when page loads
+      document.addEventListener("DOMContentLoaded", updateHeaderButtons);
+
+      // Update header buttons when storage changes
+      window.addEventListener("storage", updateHeaderButtons);
+    </script>
+  </body>
+</html>
